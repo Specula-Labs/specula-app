@@ -53,7 +53,7 @@ function formatDate(value: string, utc = false) {
   return `${new Intl.DateTimeFormat(undefined, { dateStyle: "medium", timeStyle: "short", ...(utc ? { timeZone: "UTC" } : {}) }).format(date)}${utc ? " UTC" : ""}`;
 }
 function formatXlm(value: number) { return new Intl.NumberFormat(undefined, { maximumFractionDigits: 2 }).format(value); }
-function networkName(passphrase?: string) {
+export function networkName(passphrase?: string) {
   if (!passphrase) return "Stellar network";
   if (passphrase.includes("Test SDF Network")) return "Testnet";
   if (passphrase.includes("Public Global Stellar Network")) return "Public network";
@@ -78,7 +78,7 @@ export function downloadEventsCsv(events: SentinelEvent[]) {
   window.setTimeout(() => URL.revokeObjectURL(url), 0);
 }
 
-function explorerUrl(network: string | undefined, type: "account" | "contract" | "tx", value: string) {
+export function explorerUrl(network: string | undefined, type: "account" | "contract" | "tx", value: string) {
   const normalized = network?.toLowerCase() || "";
   const networkPath = normalized.includes("testnet") || normalized.includes("test sdf network")
     ? "testnet"
