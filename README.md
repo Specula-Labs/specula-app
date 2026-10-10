@@ -108,6 +108,7 @@ Set `NEXT_PUBLIC_API_BASE_URL` in `.env.local` (default: `http://localhost:8000`
 - `GET /network/status` reports the Stellar network, Soroban RPC health, and latest ledger.
 
 When the backend identifies the network as Public Network or Testnet, account, contract, and available transaction references link to the matching Stellar Expert explorer. Unknown networks and missing transaction hashes remain plain text.
+Event-table links use the event feed's `source.network`, independently of the network health check. Account-assessment links use the assessment's own `source.network`.
 
 Keep response changes coordinated with the backend. Errors, loading, and empty states should remain explicit; do not replace missing chain data with sample values.
 
