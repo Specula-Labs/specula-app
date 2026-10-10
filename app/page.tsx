@@ -60,7 +60,7 @@ function networkName(passphrase?: string) {
   return passphrase;
 }
 
-function downloadEventsCsv(events: SentinelEvent[]) {
+export function downloadEventsCsv(events: SentinelEvent[]) {
   const rows = [
     ["event_id", "ledger", "created_at", "agent", "account", "score", "contract_id"],
     ...events.map((event) => [event.id, event.ledger, event.created_at, event.agent, event.subject, event.score, event.contract_id]),
