@@ -31,7 +31,8 @@ class ApiError extends Error {
 }
 
 async function api<T>(path: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(`${API_BASE}${path}`, { ...init, headers: { "Content-Type": "application/json", ...init?.headers } });
+  const headers = init?.body != null ? { "Content-Type": "application/json", ...init?.headers } : init?.headers;
+  const response = await fetch(`${API_BASE}${path}`, { ...init, headers });
   if (!response.ok) {
     let detail = `Request failed (${response.status})`;
     try { const body = await response.json(); detail = body.detail || body.message || detail; } catch { /* response was not JSON */ }
