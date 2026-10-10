@@ -1,4 +1,4 @@
-# Contributing to sentinel-frontend
+# Contributing to Specula App
 
 ## Setup
 ```
@@ -14,5 +14,5 @@ npm run dev
 - Update README.md if you changed a page's behavior.
 
 ## Related repos
-- sentinel-backend — API this dashboard fetches from
-- sentinel-contract — the on-chain source of truth
+- [specula-api](https://github.com/Specula-Labs/specula-api) — API this dashboard fetches from
+- [specula-contracts](https://github.com/Specula-Labs/specula-contracts) — the on-chain source of truth

@@ -2,7 +2,6 @@
 
 **A dashboard for screening Stellar account activity and reviewing Soroban contract flag events**
 
-[Open the live dashboard](https://sentinel-frontend-gules.vercel.app)
 [![CI](https://github.com/Specula-Labs/specula-app/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Specula-Labs/specula-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Stellar](https://img.shields.io/badge/Stellar-Soroban-%237b2ff7?logo=stellar)](https://developers.stellar.org)
