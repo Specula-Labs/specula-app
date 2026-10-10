@@ -45,8 +45,8 @@ function Mark() {
   return <span className="mark" aria-hidden="true"><svg viewBox="0 0 36 36" fill="none"><path d="M18 2.8 21.8 14l11.4 4-11.4 4L18 33.2 14.2 22 2.8 18l11.4-4L18 2.8Z"/><circle cx="18" cy="18" r="3.2"/></svg></span>;
 }
 
-function shortAddress(address: string) { return address.length > 18 ? `${address.slice(0, 8)}…${address.slice(-6)}` : address; }
-function isStellarPublicKeyFormat(address: string) { return /^G[A-Z2-7]{55}$/.test(address); }
+export function shortAddress(address: string) { return address.length > 18 ? `${address.slice(0, 8)}…${address.slice(-6)}` : address; }
+export function isStellarPublicKeyFormat(address: string) { return /^G[A-Z2-7]{55}$/.test(address); }
 function formatDate(value: string, utc = false) {
   const date = new Date(value);
   if (Number.isNaN(date.valueOf())) return value;
